@@ -13,3 +13,7 @@ export const userSchema = z.object({
 	name: z.string(),
 	avatar: z.string(),
 })
+
+export const likesSchema = z.object({
+	likes: z.number(),
+})

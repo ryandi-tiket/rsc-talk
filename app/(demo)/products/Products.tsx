@@ -18,7 +18,7 @@ export const ProductsSkeleton = () => (
 	</section>
 )
 
-export const ProductsSection = async () => {
+export const ProductsInner = async () => {
 	const products = await getProducts()
 
 	return (
@@ -34,7 +34,7 @@ export const Products = () => (
 	<section className="max-w-lg mx-auto">
 		<ErrorBoundary fallback={<ProductsError />}>
 			<Suspense fallback={<ProductsSkeleton />}>
-				<ProductsSection />
+				<ProductsInner />
 			</Suspense>
 		</ErrorBoundary>
 	</section>
