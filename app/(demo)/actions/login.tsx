@@ -7,7 +7,7 @@ type State =
 	  }
 	| {
 			status: 'error'
-			errorMessage: React.ReactNode
+			errorMessage: string
 	  }
 
 export const login = async (prevState: State, formData: FormData): Promise<State> => {
